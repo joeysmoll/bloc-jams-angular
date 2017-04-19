@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 angular.module('blocJams', []);
-=======
+
 (function() {
     function config($stateProvider, $locationProvider) {
         $locationProvider
@@ -29,4 +28,3 @@ angular.module('blocJams', []);
         .module('blocJams', ['ui.router'])
         .config(config);
 })();
->>>>>>> bja-routing
