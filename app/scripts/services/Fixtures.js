@@ -41,11 +41,8 @@
             for (var i = 0; i < numberOfAlbums; i++){
                collectionArray.push(albumPicasso);
             }
-            console.log(collectionArray);
-            return collectionArray;
-            
+            return collectionArray;   
      };
-
          return Fixtures;
      }
  
