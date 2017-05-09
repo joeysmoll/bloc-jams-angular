@@ -15,7 +15,6 @@
 
           var currentAlbum = Fixtures.getAlbum();
                              
-
           /**
           * @desc Buzz object audio file
           * @type {Object}
@@ -92,11 +91,13 @@
             if (SongPlayer.currentSong !== song) {
                 setSong(song);
                 playSong(song);
-            } else if (SongPlayer.currentSong === song) {
+            }else if (SongPlayer.currentSong === song) {
                 if (currentBuzzObject.isPaused()) {
                     playSong(song);
                     }
-                }
+             }else if(SongPlayer.currentSong === null){
+                 playSong(currentAlbum.songs[0]);
+             }
           };
           
          /**
