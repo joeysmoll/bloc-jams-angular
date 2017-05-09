@@ -13,7 +13,8 @@
           * @type {Object}
           */
 
-          var currentAlbum = Fixtures.getAlbum();                      
+          var currentAlbum = Fixtures.getAlbum();
+                             
 
           /**
           * @desc Buzz object audio file
@@ -119,10 +120,13 @@
           SongPlayer.previous = function() {
              var currentSongIndex = getSongIndex(SongPlayer.currentSong);
              currentSongIndex--;
+             console.log(currentAlbum.artist);
 
-             if (currentSongIndex < 0) {
-                 stopSong(song);
-             } else {
+            if (currentSongIndex < 0) {
+                var song = currentAlbum.songs[currentAlbum.songs.length - 1];
+                setSong(song);
+                playSong(song);
+            }else {
                     var song = currentAlbum.songs[currentSongIndex];
                     setSong(song);
                     playSong(song);
@@ -140,15 +144,15 @@
             currentSongIndex++;
 
             if (currentSongIndex > (currentAlbum.songs.length -1)) {
-                stopSong(song);
-            } else {
+                var song = currentAlbum.songs[0];
+                setSong(song);
+                playSong(song);
+            }else{
                 var song = currentAlbum.songs[currentSongIndex];
                 setSong(song);
                 playSong(song);
             }
 
-            
-          
         };
 
           return SongPlayer;
