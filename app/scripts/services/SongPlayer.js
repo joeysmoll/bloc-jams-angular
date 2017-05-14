@@ -95,8 +95,6 @@
                 if (currentBuzzObject.isPaused()) {
                     playSong(song);
                     }
-             }else if(SongPlayer.currentSong === null){
-                 playSong(currentAlbum.songs[0]);
              }
           };
           
@@ -121,7 +119,6 @@
           SongPlayer.previous = function() {
              var currentSongIndex = getSongIndex(SongPlayer.currentSong);
              currentSongIndex--;
-             console.log(currentAlbum.artist);
 
             if (currentSongIndex < 0) {
                 var song = currentAlbum.songs[currentAlbum.songs.length - 1];
