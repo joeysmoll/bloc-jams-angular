@@ -26,13 +26,13 @@
                  var percent = value / max * 100;
                  return percent + "%";
              };
- 
+
              scope.fillStyle = function() {
                  return {width: percentString()};
              };
 
             scope.thumbStyle = function() {
-                 return {css: {left: percentString()}};
+                 return {left: percentString()};
              };
 
              scope.onClickSeekBar = function(event) {
@@ -46,7 +46,7 @@
                         scope.value = percent * scope.max;
                     });
                 });
-            
+
                 $document.bind('mouseup.thumb', function() {
                     $document.unbind('mousemove.thumb');
                     $document.unbind('mouseup.thumb');
