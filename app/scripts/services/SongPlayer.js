@@ -93,6 +93,13 @@
           */
           SongPlayer.currentTime = null;
 
+
+           /**
+          * @desc Current volume level of currently playing song
+          * @type {Number}
+          */
+          SongPlayer.volume = null;
+
          /**
           * @function .play
           * @desc Decides whether to set and play new song or play a paused song
@@ -174,6 +181,12 @@
           SongPlayer.setCurrentTime = function(time) {
              if (currentBuzzObject) {
                  currentBuzzObject.setTime(time);
+             }
+          };
+
+          SongPlayer.setVolume = function(volume) {
+             if (currentBuzzObject) {
+                 currentBuzzObject.setVolume(volume);
              }
           };
 
