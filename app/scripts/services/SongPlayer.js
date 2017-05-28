@@ -184,7 +184,13 @@
              }
           };
 
-          SongPlayer.setVolume = function(volume) {
+          /**
+          * @function volume
+          * @desc Set volume level of currently playing song
+          * @param {Number} volume
+          */
+
+          SongPlayer.volume = function(volume) {
              if (currentBuzzObject) {
                  currentBuzzObject.setVolume(volume);
              }
